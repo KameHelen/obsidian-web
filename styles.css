@@ -12,15 +12,31 @@ body {
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
 }
-
+video {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 800px; /* Máximo ancho */
+  border-radius: 8px; /* Bordes redondeados */
+}
 .hero {
   position: relative;
   height: 100vh;
-  background: url('https://media.giphy.com/media/3o6gDWzmAzrpi5DQU8/giphy.gif') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
+}
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;  /* Fuerza el ancho mínimo */
+  min-height: 100%; /* Fuerza el alto mínimo */
+  width: auto;      /* Permite escalado proporcional */
+  height: auto;     /* Permite escalado proporcional */
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Recorta el exceso vertical si es necesario */
+  z-index: -1;
 }
 
 .hero-overlay {
@@ -40,6 +56,26 @@ body {
 .hero p {
   font-size: 1.2rem;
   color: #ffffff;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 20px; /* Espacio sobre el botón */
+  padding: 12px 30px;
+  background-color: #ff3366; /* Color principal */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 2px solid #ff3366;
+  transition: all 0.3s ease; /* Suaviza los cambios */
+  cursor: pointer;
+}
+.hero-button:hover {
+  background-color: transparent;
+  color: #ff3366;
+  border-color: #ff3366;
+  transform: scale(1.05); /* Efecto de zoom leve */
 }
 
 .catalogo {

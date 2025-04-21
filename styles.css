@@ -52,3 +52,67 @@ body {
   text-align: center;
   color: #ff2e63;
 }
+
+
+.carrusel {
+    display: flex;
+    gap: 2rem;
+    width: 1000px; /* 4 tarjetas de 250px + márgenes */
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+
+.carrusel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carrusel-btn {
+    background-color: rgba(0, 255, 255, 0.3);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.3s ease;
+  }
+  
+  .carrusel-btn:hover {
+    background-color: rgba(0, 255, 255, 0.6);
+  }
+  
+  .carrusel-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2rem 0;
+  }
+
+  .juego-card {
+    background-color: #111;
+    color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 220px;
+    flex-shrink: 0;
+    text-align: center;
+    box-shadow: 0 0 10px #0ff5;
+    transition: transform 0.3s ease;
+  }
+  
+  .juego-card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .plataformas span {
+    margin: 0 5px;
+    font-size: 1.2rem;
+  }

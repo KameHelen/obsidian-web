@@ -1,4 +1,4 @@
-<script>
+
   const prevBtn = document.querySelector('.carrusel-btn.prev');
   const nextBtn = document.querySelector('.carrusel-btn.next');
   const carrusel = document.querySelector('.carrusel');
@@ -16,4 +16,4 @@
       behavior: 'smooth'
     });
   });
-</script>
+

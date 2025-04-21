@@ -116,3 +116,20 @@ body {
     margin: 0 5px;
     font-size: 1.2rem;
   }
+
+  .btn-carrusel {
+  background-color: #088;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.btn-carrusel:hover {
+  background-color: #0cc;
+}

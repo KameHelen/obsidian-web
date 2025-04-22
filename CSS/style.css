@@ -64,7 +64,7 @@ section{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: #2696E9;
+    background: #000000;
 
     .content{
         z-index: 888;

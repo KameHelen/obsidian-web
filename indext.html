@@ -1,29 +1,112 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Obsidian Games - Catálogo</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Document</title>
 </head>
 <body>
+    <header>
+        <a href="#" class="brand">Travel</a>
+        <div class="menu-btn">
 
-  <!-- CABECERA PROMOCIONAL -->
-  <header class="hero">
-    <div class="hero-overlay">
-      <h1>JUEGA A LA DEMO GRATUITA</h1>
-      <p>Descubre nuestro nuevo lanzamiento y embárcate en una aventura única. ¡Disponible ya para jugar desde esta misma página!</p>
-    </div>
-  </header>
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#" >Home</a>
+                <a href="#" >About</a>
+                <a href="#">Services</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+        
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide active" src="video/1.mp4" autoplay muted loop ></video>
+        <video class="video-slide" src="video/2.mp4" autoplay muted loop ></video>
+        <video class="video-slide" src="video/3.mp4" autoplay muted loop ></video>
+        <video class="video-slide" src="video/4.mp4" autoplay muted loop ></video>
+        <video class="video-slide" src="video/5.mp4" autoplay muted loop ></video>
+        <div class="content active">
+            <h1>Wonderful.<br><span>Island</span></h1>
+            <p>Hello esto es una pruena de cositas</p>
+            <a href="#">Jugar</a>
+        </div>
+        <div class="content">
+            <h1>2.<br><span>Island</span></h1>
+            <p>Hello esto es una pruena de cositas</p>
+            <a href="#">Jugar</a>
+        </div>
+        <div class="content">
+            <h1>3.<br><span>Island</span></h1>
+            <p>Hello esto es una pruena de cositas</p>
+            <a href="#">Jugar</a>
+        </div>
+        <div class="content">
+            <h1>4.<br><span>Island</span></h1>
+            <p>Hello esto es una pruena de cositas</p>
+            <a href="#">Jugar</a>
+        </div>
+        <div class="content">
+            <h1>5.<br><span>Island</span></h1>
+            <p>Hello esto es una pruena de cositas</p>
+            <a href="#">Jugar</a>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
 
- 
-  <main >
-   
-  </main>
 
-  <script src="script.js"></script>
+    </section>
+    <script type="text/javascript">
+        const menuBtn = document.querySelector('.menu-btn');
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+        });
+
+        //deslizador de video 
+        const btns = document.querySelectorAll('.nav-btn');
+        const slides = document.querySelectorAll('.video-slide');
+        const contents = document.querySelectorAll('.content');
+        
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove('active');
+            });
+            slides.forEach((slides) => {
+                slides.classList.remove('active');
+            });
+            contents.forEach((contents) => {
+                contents.classList.remove('active');
+            });
+     
+     
+            btns[manual].classList.add('active');
+            slides[manual].classList.add('active');
+            contents[manual].classList.add('active');
+
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                sliderNav(i);
+              
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-

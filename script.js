@@ -1,50 +1,65 @@
-const prevBtn = document.querySelector('.carrusel-btn.prev');
-const nextBtn = document.querySelector('.carrusel-btn.next');
 const carruselContainer = document.querySelector('.carrusel-container');
-// Asegura que al cargar, el scroll está al inicio
-window.addEventListener('load', () => {
-  carruselContainer.scrollLeft = 0;
-});
-
 const carrusel = document.querySelector('.carrusel');
+const nextBtn = document.querySelector('.carrusel-btn.next');
+const prevBtn = document.querySelector('.carrusel-btn.prev');
 
-// Tamaño de un "paso" (una tarjeta + margen). Ajusta si cambias estilos.
-const paso = 240 + 32; // ancho de tarjeta + gap (220 + 20 + 12 extra por si acaso)
+let cardWidth = 0;
+let cardsPerView = 0;
+let totalCards = 0;
+let currentIndex = 0;
 
-prevBtn.addEventListener('click', () => {
-  if (carruselContainer.scrollLeft <= 0) {
-    // Si ya estamos al principio, salta al final
-    carruselContainer.scrollTo({
-      left: carrusel.scrollWidth,
-      behavior: 'smooth'
-    });
-  } else {
-    carruselContainer.scrollBy({
-      left: -paso,
-      behavior: 'smooth'
-    });
+// Calcular ancho de tarjeta y cuántas caben en pantalla
+function calcularCardWidth() {
+  const card = carrusel.querySelector('.juego-card');
+  if (card) {
+    cardWidth = card.offsetWidth + parseInt(getComputedStyle(card).marginRight);
+    cardsPerView = Math.floor(carruselContainer.offsetWidth / cardWidth);
   }
+}
+
+// Inicializa el carrusel
+function initCarousel() {
+  const cards = carrusel.querySelectorAll('.juego-card');
+  totalCards = cards.length;
+  calcularCardWidth();
+  currentIndex = 0;
+  updateCarousel();
+}
+
+// Actualiza la posición del carrusel
+function updateCarousel() {
+  carruselContainer.scrollTo({
+    left: currentIndex * cardWidth,
+    behavior: 'smooth'
+  });
+}
+
+// Mover el carrusel
+function moveCarousel(direction) {
+  currentIndex += direction;
+
+  // Ajustar índices para bucle continuo
+  if (currentIndex >= totalCards - cardsPerView + 1) {
+    currentIndex = 0;
+  } else if (currentIndex < 0) {
+    currentIndex = totalCards - cardsPerView;
+  }
+
+  updateCarousel();
+}
+
+// Event listeners
+nextBtn.addEventListener('click', () => moveCarousel(1));
+prevBtn.addEventListener('click', () => moveCarousel(-1));
+
+window.addEventListener('resize', () => {
+  calcularCardWidth();
+  updateCarousel();
 });
 
-nextBtn.addEventListener('click', () => {
-  const maxScrollLeft = carrusel.scrollWidth - carruselContainer.clientWidth;
-
-  if (carruselContainer.scrollLeft >= maxScrollLeft) {
-    // Si ya estamos al final, salta al principio
-    carruselContainer.scrollTo({
-      left: 0,
-      behavior: 'smooth'
-    });
-  } else {
-    carruselContainer.scrollBy({
-      left: paso,
-      behavior: 'smooth'
-    });
-  }
-});
-
-// Asegura que al cargar, el scroll está al inicio
+// Inicializar cuando todo esté cargado
 window.addEventListener('load', () => {
-  carruselContainer.scrollTo({ left: 0, behavior: 'auto' });
+  initCarousel();
+  // Forzar un recálculo después de un breve retraso para asegurarse
+  setTimeout(initCarousel, 100);
 });
-

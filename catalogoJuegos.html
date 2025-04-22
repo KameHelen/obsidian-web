@@ -1,68 +1,124 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Obsidian Games - Catálogo</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <!-- CABECERA PROMOCIONAL -->
   <header class="hero">
     <div class="hero-overlay">
       <h1>JUEGA A LA DEMO GRATUITA</h1>
-      <p>Descubre nuestro nuevo lanzamiento y embárcate en una aventura única. ¡Disponible ya para jugar desde esta misma página!</p>
+      <p>Descubre nuestro nuevo lanzamiento y embárcate en una aventura única. ¡Disponible ya para jugar desde esta
+        misma página!</p>
     </div>
   </header>
 
-  <!-- CATÁLOGO DE JUEGOS -->
-  <main class="catalogo">
-    <h2>Catálogo de juegos</h2>
+  <div class="carrusel-wrapper">
+    <button class="carrusel-btn prev">⟨</button>
   
-    <div class="carrusel-wrapper">
-      <button class="carrusel-btn prev">⟨</button>
-  
-      <div class="carrusel-container">
-        <div class="carrusel">
+    <div class="carrusel-container">
+      <div class="carrusel">
+        <!-- Tarjeta 1 -->
+        <a href="azure.html" class="juego-enlace">
           <div class="juego-card">
-            <img src="https://cdn.ubi.com/Assassins_Creed_Shadow.jpg" alt="Assassin's Creed Shadows">
-            <h3>Assassin's Creed Shadows</h3>
+            <img src="recursos/AzurePortada.png" alt="Azure Legazy">
+            <h3>Azure Legazy</h3>
             <div class="plataformas">
               <span>🎮</span><span>🖥️</span><span>🍏</span><span>☁️</span>
             </div>
           </div>
+        </a>
   
+        <!-- Tarjeta 2 -->
+        <a href="casino.html" class="juego-enlace">
           <div class="juego-card">
-            <img src="https://cdn.ubi.com/Rainbow_Six_Siege.jpg" alt="Rainbow Six Siege">
-            <h3>Rainbow Six Siege</h3>
+            <img src="recursos/CasinoPortada.png" alt="Casino">
+            <h3>Casino</h3>
             <div class="plataformas">
               <span>🖥️</span><span>🎮</span><span>☁️</span>
             </div>
           </div>
+        </a>
   
+         <!-- Tarjeta 3 -->
+        <a href="hispalis.html" class="juego-enlace">
           <div class="juego-card">
-            <img src="https://cdn.ubi.com/Star_Wars_Outlaws.jpg" alt="Star Wars Outlaws">
-            <h3>Star Wars Outlaws</h3>
+            <img src="recursos/HispalisPortada.png" alt="Hispalis">
+            <h3>Hispalis</h3>
             <div class="plataformas">
-              <span>🎮</span><span>🖥️</span>
-
-              
+              <span>🖥️</span><span>🎮</span><span>☁️</span>
             </div>
           </div>
-  
-          <!-- Más tarjetas si quieres -->
-        </div>
+        </a>
+
+       <!-- Tarjeta 4 -->
+         <a href="camaleon.html" class="juego-enlace">
+          <div class="juego-card">
+            <img src="recursos/CamaleonPortada.png" alt="Las Increibles Aventuras del Camaleón Verde">
+            <h3>Las Increibles Aventuras del Camaleón Verde</h3>
+            <div class="plataformas">
+              <span>🖥️</span><span>🎮</span><span>☁️</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Tarjeta 5 -->
+        <a href="noirCity.html" class="juego-enlace">
+          <div class="juego-card">
+            <img src="recursos/NoirCityPortada.png" alt="Noir City">
+            <h3>Noir City</h3>
+            <div class="plataformas">
+              <span>🖥️</span><span>🎮</span><span>☁️</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Tarjeta 6 -->
+        <a href="petNewLife.html" class="juego-enlace">
+          <div class="juego-card">
+            <img src="recursos/CamaleonPortada.png" alt="Pet New Life">
+            <h3>Pet New Life</h3>
+            <div class="plataformas">
+              <span>🖥️</span><span>🎮</span><span>☁️</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Tarjeta 7 -->
+        <a href="camaleon.html" class="juego-enlace">
+          <div class="juego-card">
+            <img src="recursos/CamaleonPortada.png" alt="Las Increibles Aventuras del Camaleón Verde">
+            <h3>Las Increibles Aventuras del Camaleón Verde</h3>
+            <div class="plataformas">
+              <span>🖥️</span><span>🎮</span><span>☁️</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Tarjeta 8 -->
+        <a href="camaleon.html" class="juego-enlace">
+          <div class="juego-card">
+            <img src="recursos/CamaleonPortada.png" alt="Las Increibles Aventuras del Camaleón Verde">
+            <h3>Las Increibles Aventuras del Camaleón Verde</h3>
+            <div class="plataformas">
+              <span>🖥️</span><span>🎮</span><span>☁️</span>
+            </div>
+          </div>
+        </a>
+
       </div>
-  
-      <button class="carrusel-btn next">⟩</button>
     </div>
-  </main>
   
-
-  
-
+    <button class="carrusel-btn next">⟩</button>
+  </div>
+ 
   <script src="script.js"></script>
 </body>
+
 </html>

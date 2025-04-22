@@ -1,6 +1,11 @@
 const prevBtn = document.querySelector('.carrusel-btn.prev');
 const nextBtn = document.querySelector('.carrusel-btn.next');
 const carruselContainer = document.querySelector('.carrusel-container');
+// Asegura que al cargar, el scroll está al inicio
+window.addEventListener('load', () => {
+  carruselContainer.scrollLeft = 0;
+});
+
 const carrusel = document.querySelector('.carrusel');
 
 // Tamaño de un "paso" (una tarjeta + margen). Ajusta si cambias estilos.
@@ -37,3 +42,9 @@ nextBtn.addEventListener('click', () => {
     });
   }
 });
+
+// Asegura que al cargar, el scroll está al inicio
+window.addEventListener('load', () => {
+  carruselContainer.scrollTo({ left: 0, behavior: 'auto' });
+});
+

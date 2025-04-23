@@ -16,6 +16,7 @@ header{
     padding: 15px 200px;
     transition: 0.5s ease;
     .brand{
+       
         color: #fff;
         font-size: 1.5rem;
         font-weight: 700;
@@ -74,6 +75,10 @@ section{
         display: none;
         
         h1{
+        background-image: radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgba(105, 255, 137, 1) 68%);
+        background-clip:text ;
+        color: transparent;
+          
             font-size: 4em;
             font-weight: 900;
             text-transform: uppercase;
@@ -89,13 +94,15 @@ section{
             margin-bottom: 65px;
         }
         a{
-            background: #fff;
+            background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
             padding: 15px 35px;
-            color: #1680AC;
+            color: #fff;
             font-size: 1.1em;
             font-weight: 500;
             text-decoration: none;
-            border-radius: 2px;
+            border-radius: 250px;
+            
+            
         }
     }
     .media-icons {
@@ -180,3 +187,30 @@ section{
     transition-property: clip-path;
 }
 
+
+#cookieBanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #cookieBanner button {
+    margin-left: 15px;
+    background-color: #27ae60;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #cookieBanner button:hover {
+    background-color: #2ecc71;
+  }

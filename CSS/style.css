@@ -452,7 +452,7 @@ footer .footer .copyright a:hover{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  .footer-container {
+  .footer-contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -460,48 +460,48 @@ footer .footer .copyright a:hover{
     margin: 0 auto;
   }
   
-  .footer-column {
+  .footer-columna {
     flex: 1 1 200px;
     margin: 20px;
   }
   
-  .footer-column h3,
-  .footer-column h4 {
+  .footer-columna h3,
+  .footer-columna h4 {
     color: #00ffff;
     margin-bottom: 15px;
   }
   
-  .footer-column ul {
+  .footer-columna ul {
     list-style: none;
     padding: 0;
   }
   
-  .footer-column ul li {
+  .footer-columna ul li {
     margin-bottom: 10px;
   }
   
-  .footer-column ul li a {
+  .footer-columna ul li a {
     color: #ccc;
     text-decoration: none;
     transition: color 0.3s;
   }
   
-  .footer-column ul li a:hover {
+  .footer-columna ul li a:hover {
     color: #00ffff;
   }
   
-  .social-icons a {
+  .social-iconos a {
     color: #ccc;
     margin-right: 15px;
     font-size: 1.2rem;
     transition: color 0.3s;
   }
   
-  .social-icons a:hover {
+  .social-iconos a:hover {
     color: #00ffff;
   }
   
-  .footer-bottom {
+  .footer-derechos {
     text-align: center;
     margin-top: 40px;
     border-top: 1px solid #333;
@@ -530,19 +530,19 @@ footer .footer .copyright a:hover{
     width: 300px;
 }
 
-.login-container h2 {
+.login-contenedor h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #00ffff;
 }
 
-.login-container label {
+.login-contenedor label {
     display: block;
     margin-bottom: 5px;
     color: #00ffff;
 }
 
-.login-container input {
+.login-contenedor input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -552,7 +552,7 @@ footer .footer .copyright a:hover{
     color: #fff;
 }
 
-.login-container button {
+.login-contenedor button {
     width: 100%;
     padding: 10px;
     background-color: #00ffff;
@@ -563,6 +563,6 @@ footer .footer .copyright a:hover{
     cursor: pointer;
 }
 
-.login-container button:hover {
+.login-contenedor button:hover {
     background-color: #00cccc;
 }

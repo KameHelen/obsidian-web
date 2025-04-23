@@ -71,19 +71,6 @@ section {
   padding: 100px 200px;
 }
 
-.cart-icon-nav {
-  display: inline-block;
-  margin-left: 30px;
-  background-color: #ff4081;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  cursor: default;
-}
-
-
 /* HOME */
 
 .home {

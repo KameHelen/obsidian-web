@@ -24,7 +24,7 @@ header .brand {
   text-transform: uppercase;
   text-decoration: none;
 }
-
+  
 header .navigation {
     background: rgba(0, 0, 0, 0.5);
     height: 60px;

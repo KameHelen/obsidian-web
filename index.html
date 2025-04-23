@@ -129,29 +129,30 @@
         menuBtn.addEventListener('click', () => {
             menuBtn.classList.toggle('active');
         });
-
-     // Deslizador de video 
-     const btns = document.querySelectorAll('.nav-btn');
+    
+        // Deslizador de video 
+        const btns = document.querySelectorAll('.nav-btn');
         const slides = document.querySelectorAll('.video-slide');
         const contents = document.querySelectorAll('.content');
-    
+        
         let currentIndex = 0;
     
         var sliderNav = function(manual) {
             btns.forEach((btn) => {
                 btn.classList.remove('active');
             });
-            slides.forEach((slide) => {
-                slide.classList.remove('active');
+            slides.forEach((slides) => {
+                slides.classList.remove('active');
             });
-            contents.forEach((content) => {
-                content.classList.remove('active');
+            contents.forEach((contents) =>   {
+                contents.classList.remove('active');
             });
-    
+     
+     
             btns[manual].classList.add('active');
             slides[manual].classList.add('active');
             contents[manual].classList.add('active');
-    
+
             currentIndex = manual; // actualizar el índice actual
         }
 
@@ -161,6 +162,7 @@
               
             });
         });
+    
         // Movimiento automático del carrusel
         setInterval(() => {
             currentIndex = (currentIndex + 1) % slides.length;

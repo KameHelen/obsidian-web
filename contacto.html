@@ -57,24 +57,6 @@
     Este sitio utiliza cookies para mejorar la experiencia del usuario.
     <button onclick="aceptarCookies()">Aceptar</button>
   </div>
-
-  <script>
-    function aceptarCookies() {
-      localStorage.setItem("cookiesAceptadas", "true");
-      document.getElementById("cookieBanner").style.display = "none";
-    }
-
-    window.onload = function () {
-      if (localStorage.getItem("cookiesAceptadas") === "true") {
-        document.getElementById("cookieBanner").style.display = "none";
-      }
-    };
-
-    // Botón de menú (si lo necesitas activo aquí también)
-    const menuBtn = document.querySelector('.menu-btn');
-    menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('active');
-    });
-  </script>
+  <script src="script/cookies.js"></script>
 </body>
 </html>

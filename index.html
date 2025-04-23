@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>OBSIDIAN</title>
 </head>
@@ -16,10 +16,11 @@
         </div>
         <div class="navigation">
             <div class="navigation-items">
-                <a href="index.html" >INICIO</a>
-                <a href="#" >ABOUT</a>
-                <a href="catalogoJuegos.html">CATALOGO</a>
-                <a href="contacto.html">CONTACTO</a>
+                <a href="#" >Home</a>
+                <a href="#" >About</a>
+                <a href="#">Services</a>
+                <a href="catalogoJuegos.html">Catalogo</a>
+                <a href="#">Contact</a>
             </div>
         
         </div>
@@ -38,7 +39,7 @@
         <div class="content">
             <h1>Azure<br><span>Legazy</span></h1>
             <p>Hello esto es una pruena de cositas</p>
-            <a href="azure.html" class="hero-button">MAS INFO</a>
+            <a href="azure.html">MAS INFO</a>
         </div>
         <div class="content">
             <h1>Noir<br><span>city</span></h1>
@@ -69,15 +70,48 @@
             <div class="nav-btn"></div>
         </div>
         <div id="cookieBanner">
-            Este sitio utiliza cookies para mejorar la experiencia del usuario .
+            Este sitio utiliza cookies para mejorar la experiencia del usuario.
             <button onclick="aceptarCookies()">Aceptar</button>
         </div>
-        
 
 
     </section>
-    
-    <script src="script/index.js"> </script>
+    <script type="text/javascript">
+        const menuBtn = document.querySelector('.menu-btn');
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+        });
+
+        //deslizador de video 
+        const btns = document.querySelectorAll('.nav-btn');
+        const slides = document.querySelectorAll('.video-slide');
+        const contents = document.querySelectorAll('.content');
+        
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove('active');
+            });
+            slides.forEach((slides) => {
+                slides.classList.remove('active');
+            });
+            contents.forEach((contents) => {
+                contents.classList.remove('active');
+            });
+     
+     
+            btns[manual].classList.add('active');
+            slides[manual].classList.add('active');
+            contents[manual].classList.add('active');
+
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                sliderNav(i);
+              
+            });
+        });
+    </script>
     <script src="script/cookies.js"></script>
 </body>
 </html>

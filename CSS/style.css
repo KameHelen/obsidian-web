@@ -39,11 +39,7 @@ header .brand {
 }
 
 header .navigation {
-  background: rgba(0, 0, 0, 0.5);
-  height: 60px;
-  width: 100%;
   position: relative;
-  z-index: 2;
 }
 
 header .navigation-items a {
@@ -396,7 +392,10 @@ section {
 .juego-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 1rem;
   background: linear-gradient(45deg, #00ffff33, #ff00ff33);
   opacity: 0;

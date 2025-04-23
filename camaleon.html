@@ -4,24 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Obsidian Games - Catálogo</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-  <!-- CABECERA CON VIDEO EN BUCLE -->
-
-  <header class="hero">
-    <!-- Video de fondo -->
-    <video autoplay loop muted playsinline class="hero-video">
-      <source src="recursos/Las Increibles Aventuras del Camaleón Verde.mp4"  type= "video/mp4">
-    </video>
-    <!-- Contenido del encabezado (texto) -->
-    <div class="hero-overlay">
-      <h1>LAS INCREIBLES AVENTURAS DEL CAMALEÓN VERDE</h1>
-      <p>Descubre nuestro nuevo lanzamiento y embárcate en una aventura única. ¡Disponible ya para jugar desde esta misma página!</p>
-      <!-- Botón añadido -->
-      <a href="#" class="hero-button">DESCARGAR</a>
+  <!-- HEADER FIJO -->
+  <header>
+    <a href="index.html" class="brand">OBSIDIAN</a>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="index.html">INICIO</a>
+        <a href="catalogoJuegos.html">CATALOGO</a>
+        <a href="contacto.html">CONTACTO</a>
+      </div>
     </div>
   </header>
+
+  <!-- HERO (VIDEO Y TEXTO) -->
+  <section class="hero">
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="recursos/Las Increibles Aventuras del Camaleón Verde.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay">
+      <h1>CAMALEÓN VERDE</h1>
+      <p>Descubre nuestro nuevo lanzamiento y embárcate en una aventura única. ¡Disponible ya para jugar desde esta misma página!</p>
+      <a href="#" class="hero-button">DESCARGAR</a>
+    </div>
+  </section>
+
+  
   <main>
     <!-- Resto de tu contenido -->
   </main>

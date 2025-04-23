@@ -186,5 +186,99 @@ section{
     transition: 2s ease;
     transition-property: clip-path;
 }
+footer{
+    padding:1rem ;
+    width: 100%;
+    background: #000000;
+}
+footer .footer{
+    background: linear-gradient(90deg,rgba(102, 99, 99, 1) 0%, rgba(9, 9, 23, 1) 57%, rgba(173, 173, 173, 1) 100%);
+    border-radius: .7rem;
+    padding: 6rem 7rem;
+    padding-bottom: 1rem;
+}footer .footer .containerv2{
+    display: flex;
+    justify-content: space-between;
+   padding-bottom: 1rem;
+   border-bottom: 1px solid rgb(17, 26, 23);
+   gap: 2rem;
+}footer .footer .containerv2 .detail{
+    max-width: 32rem;
+}footer .footer .containerv2 .detail h3{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #fff;
+}footer .footer .containerv2 .detail p{
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom:1.5rem ;
+}footer .footer .containerv2 .detail h5{
+    font-size: 1rem;
+    font-weight: 400;
+    color : #fff;
+}footer .footer .containerv2 .detail a{
+    color: #fff;
+    text-decoration: none;
+    font-size: .9rem;
+    border-bottom: 2px solid #09d8e7;
+    padding: 1px 0;
+    display: inline-block;
+    
+  
+}footer .footer .containerv2 .detail .social{
+    display: flex;
+    gap: .8rem;
+    margin-top: 1rem;
+
+}footer .footer .containerv2 .detail .social a{
+   border: none;
+   font-size: 1.3rem;
+   color: #fff;
+}footer .footer .containerv2 h4{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    color: #fff;
+}
+footer .footer .containerv2 li{
+    list-style: none;
+    margin-top: 1rem;
+}
+footer .footer .containerv2 a{
+    color: #fff;
+    text-decoration: none;
+    
+}footer .footer .containerv2 a:hover{
+    color: #fff;
+    text-decoration: inline-block;
+    border-bottom: 5px solid #09d8e7;
+}
+footer .footer .copyright{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: .9rem;
+    color: #fff;
+    text-align: center;
+
+}
+footer .footer .copyright a{
+    color: #fff;
+    margin-left: 1rem;
+    text-align: center;
+    text-decoration: none;
+
+}
+footer .footer .copyright a:hover{
+    color: #fff;
+    text-decoration: inline-block;
+    border-bottom: 5px solid #09d8e7;
+}
+
+   
+    
+ 
+
 
 

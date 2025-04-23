@@ -29,6 +29,6 @@
         btns.forEach((btn, i) => {
             btn.addEventListener('click', () => {
                 sliderNav(i);
-              
+
             });
         });

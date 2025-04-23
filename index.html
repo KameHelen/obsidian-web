@@ -16,9 +16,11 @@
         </div>
         <div class="navigation">
             <div class="navigation-items">
-                <a href="index.html" >INICIO</a>
-                <a href="catalogoJuegos.html">CATALOGO</a>
-                <a href="contacto.html">CONTACTO</a>
+                <a href="#" >Home</a>
+                <a href="#" >About</a>
+                <a href="#">Services</a>
+                <a href="catalogoJuegos.html">Catalogo</a>
+                <a href="#">Contact</a>
             </div>
         
         </div>
@@ -83,10 +85,9 @@
             Este sitio utiliza cookies para mejorar la experiencia del usuario .
             <button onclick="aceptarCookies()">Aceptar</button>
         </div>
-        
+
 
     </section>
-<<<<<<< HEAD
     <footer>
         <section class="footer">
             <div class="containerv2">
@@ -140,8 +141,8 @@
         menuBtn.addEventListener('click', () => {
             menuBtn.classList.toggle('active');
         });
-
-        //deslizador de video 
+    
+        // Deslizador de video 
         const btns = document.querySelectorAll('.nav-btn');
         const slides = document.querySelectorAll('.video-slide');
         const contents = document.querySelectorAll('.content');
@@ -152,25 +153,23 @@
             btns.forEach((btn) => {
                 btn.classList.remove('active');
             });
-            slides.forEach((slides) => {
-                slides.classList.remove('active');
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
             });
-            contents.forEach((contents) =>   {
-                contents.classList.remove('active');
+            contents.forEach((content) => {
+                content.classList.remove('active');
             });
-     
-     
+    
             btns[manual].classList.add('active');
             slides[manual].classList.add('active');
             contents[manual].classList.add('active');
     
             currentIndex = manual; // actualizar el índice actual
         }
-
+    
         btns.forEach((btn, i) => {
             btn.addEventListener('click', () => {
                 sliderNav(i);
-              
             });
         });
     
@@ -180,10 +179,7 @@
             sliderNav(currentIndex);
         }, 5000); // cambia cada 5 segundos
     </script>
-=======
-    <script src="script/index.js"></script>
->>>>>>> origin/master
-    <script src="script/cookies.js"></script>
+ <script src="script/index.js"></script>    <script src="script/cookies.js"></script>
     <script src="script/carrito.js"></script>
 </body>
 </html>

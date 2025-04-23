@@ -366,6 +366,12 @@ video {
     margin-right: 1rem;
   }
 
+  .juego-card h3 {
+    text-decoration: none; /* quita subrayado */
+    border-bottom: none; /* quita cualquier borde inferior */
+  }
+   
+
   .juego-card::before {
   content: '';
   position: absolute;
@@ -414,6 +420,13 @@ video {
   .juego-card:hover h3 {
     color: #00ffff;
   }
+
+  .juego-enlace {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+  }
+  
   
   .btn-carrusel {
   background-color: #088;

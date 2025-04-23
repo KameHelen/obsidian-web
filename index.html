@@ -16,9 +16,11 @@
         </div>
         <div class="navigation">
             <div class="navigation-items">
-                <a href="index.html" >INICIO</a>
-                <a href="catalogoJuegos.html">CATALOGO</a>
-                <a href="contacto.html">CONTACTO</a>
+                <a href="#" >Home</a>
+                <a href="#" >About</a>
+                <a href="#">Services</a>
+                <a href="catalogoJuegos.html">Catalogo</a>
+                <a href="#">Contact</a>
             </div>
         
         </div>
@@ -39,6 +41,8 @@
             <p>Hello esto es una pruena de cositas</p>
             <a href="azure.html">MAS INFO</a>
         </div>
+
+        
         <div class="content">
             <h1>Noir<br><span>city</span></h1>
             <p>Hello esto es una pruena de cositas</p>
@@ -67,7 +71,11 @@
             <div class="nav-btn"></div>
             <div class="nav-btn"></div>
         </div>
-        
+        <div id="cookieBanner">
+            Este sitio utiliza cookies para mejorar la experiencia del usuario .
+            <button onclick="aceptarCookies()">Aceptar</button>
+        </div>
+
 
     </section>
     <footer>
@@ -123,9 +131,9 @@
         menuBtn.addEventListener('click', () => {
             menuBtn.classList.toggle('active');
         });
-    
-        // Deslizador de video 
-        const btns = document.querySelectorAll('.nav-btn');
+
+     // Deslizador de video 
+     const btns = document.querySelectorAll('.nav-btn');
         const slides = document.querySelectorAll('.video-slide');
         const contents = document.querySelectorAll('.content');
     
@@ -148,13 +156,13 @@
     
             currentIndex = manual; // actualizar el índice actual
         }
-    
+
         btns.forEach((btn, i) => {
             btn.addEventListener('click', () => {
                 sliderNav(i);
+              
             });
         });
-    
         // Movimiento automático del carrusel
         setInterval(() => {
             currentIndex = (currentIndex + 1) % slides.length;

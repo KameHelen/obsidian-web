@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="CSS/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>OBSIDIAN</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand">Obsidian</a>
+        <div class="menu-btn">
+
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#" >Home</a>
+                <a href="#" >About</a>
+                <a href="#">Services</a>
+                <a href="catalogoJuegos.html">Catalogo</a>
+                <a href="#">Contact</a>
+            </div>
+        
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide active" src="recursos/Hispalis (online-video-cutter.com).mp4" autoplay muted loop ></video>
+        <video class="video-slide" src="recursos/AzureLegacy (online-video-cutter.com).mp4" autoplay muted loop ></video>
+        <video class="video-slide" src="recursos/noircity_yU4bwNfC.mp4" autoplay muted loop ></video>
+        <video class="video-slide" src="recursos/Casino (online-video-cutter.com).mp4" autoplay muted loop ></video>
+        <video class="video-slide" src="recursos/Las Increibles Aventuras del Camaleón Verde.mp4" autoplay muted loop ></video>
+        <div class="content active">
+            <h1>HISPALIS<br><span>v1</span></h1>
+            <p>Hello esto es una pruena de cositas</p>
+            <a href="hispalis.html">MAS INFO</a>
+        </div>
+        <div class="content">
+            <h1>Azure<br><span>Legazy</span></h1>
+            <p>Hello esto es una pruena de cositas</p>
+            <a href="azure.html">MAS INFO</a>
+        </div>
+
+        
+        <div class="content">
+            <h1>Noir<br><span>city</span></h1>
+            <p>Hello esto es una pruena de cositas</p>
+            <a href="noirCity.html">MAS INFO</a>
+        </div>
+        <div class="content">
+            <h1>casino<br><span>v2</span></h1>
+            <p>Hello esto es una pruena de cositas</p>
+            <a href="casino.html">MAS INFO</a>
+        </div>
+        <div class="content">
+            <h1>Camaleón<br><span>Verde</span></h1>
+            <p>Hello esto es una pruena de cositas</p>
+            <a href="camaleon.html">MAS INFO</a>
+        </div>
+        <div class="media-icons">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+        
+
+    </section>
+    <footer>
+        <section class="footer">
+            <div class="containerv2">
+                <div class="detail">
+                    <h3>Obsidian</h3>
+                    <p>Somos una empresa dedicada a la venta de juegos</p>
+                    <h5>Nuestro correo</h5>
+                    <a href="#">Example@gmail.com</a>
+                    <div class="social">
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <h4>About us</h4>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Nuestros Terminos</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Mission and values </a></li>
+                    <li><a href="#">Patrocinadores</a></li>
+                </div>
+                <div class="about-us">
+                    <h4>Ayudas</h4>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Booking guide</a></li>
+                    <li><a href="#">Politicas</a></li>
+                    <li><a href="#">Site map</a></li>
+                   
+                </div>
+                <div class="about-us">
+                    <h4>Recursos</h4>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Catalogo</a></li>
+                    <li><a href="#">Otros</a></li>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2025 Obsidian. Todos los derechos reservados.</p>
+                <div>
+                    <a href="#">Terminos y Condiciones</a>
+                    <a href="#">Politicas de privacidad</a>
+                    
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script type="text/javascript">
+        const menuBtn = document.querySelector('.menu-btn');
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+        });
+    
+        // Deslizador de video 
+        const btns = document.querySelectorAll('.nav-btn');
+        const slides = document.querySelectorAll('.video-slide');
+        const contents = document.querySelectorAll('.content');
+    
+        let currentIndex = 0;
+    
+        var sliderNav = function(manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove('active');
+            });
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+            });
+            contents.forEach((content) => {
+                content.classList.remove('active');
+            });
+    
+            btns[manual].classList.add('active');
+            slides[manual].classList.add('active');
+            contents[manual].classList.add('active');
+    
+            currentIndex = manual; // actualizar el índice actual
+        }
+    
+        btns.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                sliderNav(i);
+            });
+        });
+    
+        // Movimiento automático del carrusel
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            sliderNav(currentIndex);
+        }, 5000); // cambia cada 5 segundos
+    </script>
+    <script src="script/cookies.js"></script>
+</body>
+</html>

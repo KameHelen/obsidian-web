@@ -25,11 +25,17 @@
     </header>
     <section class="home">
         <video class="video-slide active" src="recursos/Hispalis (online-video-cutter.com).mp4" autoplay muted loop ></video>
+        <video class="video-slide" src="recursos/Hispalis (online-video-cutter.com).mp4" autoplay muted loop ></video>
         <video class="video-slide" src="recursos/AzureLegacy (online-video-cutter.com).mp4" autoplay muted loop ></video>
         <video class="video-slide" src="recursos/noircity_yU4bwNfC.mp4" autoplay muted loop ></video>
         <video class="video-slide" src="recursos/Casino (online-video-cutter.com).mp4" autoplay muted loop ></video>
         <video class="video-slide" src="recursos/Las Increibles Aventuras del Camaleón Verde.mp4" autoplay muted loop ></video>
         <div class="content active">
+            <h1>Pong<br><span>remastered</span></h1>
+            <p>Hello esto es una pruena de cositas</p>
+            <a href="hispalis.html">Jugar</a>
+        </div>
+        <div class="content">
             <h1>HISPALIS<br><span>v1</span></h1>
             <p>Hello esto es una pruena de cositas</p>
             <a href="hispalis.html">MAS INFO</a>
@@ -60,7 +66,7 @@
             <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
-          
+
         </div>
         <div class="slider-navigation">
             <div class="nav-btn active"></div>
@@ -68,14 +74,19 @@
             <div class="nav-btn"></div>
             <div class="nav-btn"></div>
             <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
         </div>
+
+
+        /* COOKIES */
         <div id="cookieBanner">
             Este sitio utiliza cookies para mejorar la experiencia del usuario .
             <button onclick="aceptarCookies()">Aceptar</button>
         </div>
-
+        
 
     </section>
+<<<<<<< HEAD
     <footer>
         <section class="footer">
             <div class="containerv2">
@@ -129,12 +140,12 @@
         menuBtn.addEventListener('click', () => {
             menuBtn.classList.toggle('active');
         });
-    
-        // Deslizador de video 
+
+        //deslizador de video 
         const btns = document.querySelectorAll('.nav-btn');
         const slides = document.querySelectorAll('.video-slide');
         const contents = document.querySelectorAll('.content');
-        
+    
         let currentIndex = 0;
     
         var sliderNav = function(manual) {
@@ -152,7 +163,7 @@
             btns[manual].classList.add('active');
             slides[manual].classList.add('active');
             contents[manual].classList.add('active');
-
+    
             currentIndex = manual; // actualizar el índice actual
         }
 
@@ -169,6 +180,9 @@
             sliderNav(currentIndex);
         }, 5000); // cambia cada 5 segundos
     </script>
+=======
+    <script src="script/index.js"></script>
+>>>>>>> origin/master
     <script src="script/cookies.js"></script>
     <script src="script/carrito.js"></script>
 </body>

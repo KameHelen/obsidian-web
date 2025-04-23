@@ -106,24 +106,24 @@ section{
         }
     }
     .media-icons {
-       z-index: 888;
-       position: absolute;
-       right: 30px;
-       display: flex;
-       flex-direction: column;
-       transition: 0.5s ease;
-       a{
+        z-index: 888;
+        position: absolute;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s ease;
+        a{
         color: #fff;
         font-size: 1.6em;
         transition: 0.3s ease;
 
-       }
-       a:not(:last-child){
-        margin-bottom: 20px;
-       }
-         a:hover{
-          transform: scale(1.3);
-         }
+        }
+        a:not(:last-child){
+            margin-bottom: 20px;
+        }
+            a:hover{
+            transform: scale(1.3);
+            }
 
     }
     video{
@@ -139,7 +139,7 @@ section{
 }
 .home .content.active{
     display: block;
-  
+
 }
 .home:before{
     z-index: 777;
@@ -200,9 +200,9 @@ section{
     padding: 20px;
     text-align: center;
     z-index: 1000;
-  }
+}
 
-  #cookieBanner button {
+#cookieBanner button {
     margin-left: 15px;
     background-color: #27ae60;
     border: none;
@@ -211,23 +211,14 @@ section{
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  #cookieBanner button:hover {
+#cookieBanner button:hover {
     background-color: #2ecc71;
-  }
+}
 
 
 
-
-
-
-
-
-
-
-
-  /*CONTACTO HTML*/
   /* CONTACTO */
 .contact-section {
     padding: 80px 20px;

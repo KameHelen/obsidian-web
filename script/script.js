@@ -99,3 +99,18 @@ btns.forEach((btn, i) => {
       
     });
 });
+
+// Carrito 
+
+  let cartCount = 0;
+
+  const downloadButtons = document.querySelectorAll('.hero-button');
+
+  downloadButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      cartCount++;
+      document.getElementById('cart-count').innerText = cartCount;
+    });
+  });
+

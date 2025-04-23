@@ -513,7 +513,7 @@ footer .footer .copyright a:hover{
 
 
 /* LOGIN */
-.login-section {
+.login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -522,7 +522,7 @@ footer .footer .copyright a:hover{
     color: #fff;
 }
 
-.login-container {
+.login-contenedor {
     background-color: #2a2a3c;
     padding: 40px;
     border-radius: 10px;

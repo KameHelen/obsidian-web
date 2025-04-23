@@ -16,11 +16,10 @@
         </div>
         <div class="navigation">
             <div class="navigation-items">
-                <a href="#" >Home</a>
-                <a href="#" >About</a>
-                <a href="#">Services</a>
-                <a href="catalogoJuegos.html">Catalogo</a>
-                <a href="#">Contact</a>
+                <a href="index.html" >INICIO</a>
+                <a href="#" >ABOUT</a>
+                <a href="catalogoJuegos.html">CATALOGO</a>
+                <a href="contacto.html">CONTACTO</a>
             </div>
         
         </div>
@@ -78,65 +77,13 @@
             <div class="nav-btn"></div>
             <div class="nav-btn"></div>
         </div>
-        
-
-    </section>
-
-    <section class="article">
-        <h4 class="label1">Recursos</h4>
-        <h2 class="heading">Ultimas Noticias</h2>
-        <div class="containerv2">
-            <div class="lastest-article">
-                <img src="recursos/AzurePortada.png" alt="">
-                <p>Juego del Momento</p>
-                <h3>Azure Legazy</h3>
-                <div class="author">
-                    <img src="recursos/CamaleonPortada.png" alt="">
-                    <p>Roberto carlos</p>
-                </div>
-            </div>
-            <div class="more-articles">
-                <div class="box1">
-                    <div class="image">
-                        <img src="recursos/HispalisPortada.png" alt="">
-                    </div>
-                    <div class="text1">
-                        <h3>Estoy probando cosas no se que poner</h3>
-                        <li>family travel - 7 min read</li>
-                    </div>
-                </div>
-                <div class="box1">
-                    <div class="image">
-                        <img src="recursos/HispalisPortada.png" alt="">
-                    </div>
-                    <div class="text1">
-                        <h3>Estoy probando cosas no se que poner</h3>
-                        <li>family travel - 7 min read</li>
-                    </div>
-                </div>
-                <div class="box1">
-                    <div class="image">
-                        <img src="recursos/HispalisPortada.png" alt="">
-                    </div>
-                    <div class="text1">
-                        <h3>Estoy probando cosas no se que poner</h3>
-                        <li>family travel - 7 min read</li>
-                    </div>
-                </div>
-                <div class="box1">
-                    <div class="image">
-                        <img src="recursos/HispalisPortada.png" alt="">
-                    </div>
-                    <div class="text1">
-                        <h3>Estoy probando cosas no se que poner</h3>
-                        <li>family travel - 7 min read</li>
-                    </div>
-                </div>
-            </div>
+        <div id="cookieBanner">
+            Este sitio utiliza cookies para mejorar la experiencia del usuario .
+            <button onclick="aceptarCookies()">Aceptar</button>
         </div>
+
+
     </section>
-
-
     <footer>
         <section class="footer">
             <div class="containerv2">
@@ -190,43 +137,36 @@
         menuBtn.addEventListener('click', () => {
             menuBtn.classList.toggle('active');
         });
-    
-        // Deslizador de video 
+
+        //deslizador de video 
         const btns = document.querySelectorAll('.nav-btn');
         const slides = document.querySelectorAll('.video-slide');
         const contents = document.querySelectorAll('.content');
-    
-        let currentIndex = 0;
-    
-        var sliderNav = function(manual) {
+        
+        var sliderNav = function(manual){
             btns.forEach((btn) => {
                 btn.classList.remove('active');
             });
-            slides.forEach((slide) => {
-                slide.classList.remove('active');
+            slides.forEach((slides) => {
+                slides.classList.remove('active');
             });
-            contents.forEach((content) => {
-                content.classList.remove('active');
+            contents.forEach((contents) =>   {
+                contents.classList.remove('active');
             });
-    
+     
+     
             btns[manual].classList.add('active');
             slides[manual].classList.add('active');
             contents[manual].classList.add('active');
-    
-            currentIndex = manual; // actualizar el índice actual
+
         }
-    
+
         btns.forEach((btn, i) => {
             btn.addEventListener('click', () => {
                 sliderNav(i);
+              
             });
         });
-    
-        // Movimiento automático del carrusel
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            sliderNav(currentIndex);
-        }, 5000); // cambia cada 5 segundos
     </script>
     <script src="script/cookies.js"></script>
 </body>

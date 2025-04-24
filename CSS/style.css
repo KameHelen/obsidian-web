@@ -558,9 +558,20 @@ footer .footer .copyright a:hover{
     background-color: #00ffff;
     border: none;
     border-radius: 5px;
+<<<<<<< HEAD
     cursor: pointer;
   }
   
   #cookieBanner button:hover {
     background-color: #2ecc71;
   }
+=======
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-contenedor button:hover {
+    background-color: #00cccc;
+}
+>>>>>>> 25911d074ba8799a833dd58bbe1586296db55ffc

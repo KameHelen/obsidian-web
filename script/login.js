@@ -9,5 +9,7 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
 
 
     // Redirigir a la página de resultado de compra
-    window.location.href = "resultado.html";
+    window.location.href = "index.html";
 });
+const nombre = sessionStorage.getItem("nombre");
+document.getElementById("nombre").textContent = nombre;

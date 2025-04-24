@@ -66,36 +66,45 @@ window.addEventListener('load', () => {
 
 
 const menuBtn = document.querySelector('.menu-btn');
-menuBtn.addEventListener('click', () => {
-    menuBtn.classList.toggle('active');
-});
-
-//deslizador de video 
-const btns = document.querySelectorAll('.nav-btn');
-const slides = document.querySelectorAll('.video-slide');
-const contents = document.querySelectorAll('.content');
-
-var sliderNav = function(manual){
-    btns.forEach((btn) => {
-        btn.classList.remove('active');
-    });
-    slides.forEach((slides) => {
-        slides.classList.remove('active');
-    });
-    contents.forEach((contents) => {
-        contents.classList.remove('active');
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('active');
     });
 
+    // Deslizador de video 
+    const btns = document.querySelectorAll('.nav-btn');
+    const slides = document.querySelectorAll('.video-slide');
+    const contents = document.querySelectorAll('.content');
 
-    btns[manual].classList.add('active');
-    slides[manual].classList.add('active');
-    contents[manual].classList.add('active');
+    let currentIndex1 = 0;
 
-}
+    var sliderNav = function(manual) {
+        btns.forEach((btn) => {
+            btn.classList.remove('active');
+        });
+        slides.forEach((slide) => {
+            slide.classList.remove('active');
+        });
+        contents.forEach((content) => {
+            content.classList.remove('active');
+        });
 
-btns.forEach((btn, i) => {
-    btn.addEventListener('click', () => {
-        sliderNav(i);
-      
+        btns[manual].classList.add('active');
+        slides[manual].classList.add('active');
+        contents[manual].classList.add('active');
+
+        currentIndex1 = manual; // actualizar el índice actual
+    }
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+            sliderNav(i);
+        });
     });
-});
+
+    // Movimiento automático del carrusel
+    setInterval(() => {
+        currentIndex1 = (currentIndex1 + 1) % slides.length;
+        sliderNav(currentIndex1);
+    }, 5000); // cambia cada 5 segundos
+
+

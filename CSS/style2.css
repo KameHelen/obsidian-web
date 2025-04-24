@@ -275,4 +275,16 @@ footer .footer .copyright a:hover{
     text-decoration: inline-block;
     border-bottom: 5px solid #09d8e7;
 }
+.article{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 5rem;
+}
+.article .containerv2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+
+}
 
